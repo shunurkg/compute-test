@@ -1,5 +1,8 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+//import {describe,expect,it} from 'angular2/testing';
+//import {Child} from './app.component'
+
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -22,7 +25,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('compute test!');
+    expect(compiled.querySelector('h1').textContent).toContain('compute test');
   }));
   beforeEach(() => { 
     this.objCompute = new AppComponent();
@@ -38,6 +41,13 @@ it('check fibonacci series', () => {
   console.log(result);
   expect(result).toString();
 });
+// it('check fibonacci series', () => {
+//   var result=this.objCompute.FibonnaciSeries(5);
+//   console.log(result);
+//   expect(result).toString();
+// });
+
+
 it('should find the lcm and check if its greater to any given number', () => {
   var result=this.objCompute.LCM(72,120);
   console.log(result);
@@ -49,3 +59,17 @@ it('should check if the lcm is greater than or equal to the largest number', () 
   expect(result).toBeGreaterThanOrEqual(4);
 });
 });
+//tried yes
+// export function main() {
+//   describe('Greeting Component', () => {
+//       it('should emit greeting event', (done) => {
+//           let child = new Child();
+//           child.greeting.subscribe(g => {
+//              expect(g).toEqual({greeting:'hello'});
+//              done();
+//           });
+//           child.sayHello();
+//       });
+//   });
+// }
+

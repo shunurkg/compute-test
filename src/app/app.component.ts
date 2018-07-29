@@ -1,10 +1,31 @@
-import { Component } from '@angular/core';
-
+import { Component,Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
+//tried yes
+// @Component({
+//     selector:'child',
+//     template:`<button (click)="sayHello()">Greet</button>`
+// })
+// export class Child{
+//     @Output() greeting = new EventEmitter();
+//     sayHello(){
+//         this.greeting.emit({greeting:'hello'});
+//     }
+// }
+
+// @Component({
+//     selector:'parent',
+//     template:`<child (greeting)="onGreeting($event)"></child>`
+// })
+// export class Parent{
+//     onGreeting(e){
+//         console.log(e);
+//     }
+// }
+
 export class AppComponent {
   title = 'compute test';
   FibonnaciSeries(number) {
@@ -32,7 +53,7 @@ export class AppComponent {
     lcm = (n1 > n2) ? n1 : n2;
     while (true) {
       if (lcm % n1 == 0 && lcm % n2 == 0) {
-        return lcm;
+        
         break;
       }
       ++lcm;
