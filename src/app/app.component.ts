@@ -28,6 +28,8 @@ import { Component,Output, EventEmitter } from '@angular/core';
 
 export class AppComponent {
   title = 'compute test';
+
+courses=[1,2];
   FibonnaciSeries(number) {
     var first = 0;
     var second = 1;
