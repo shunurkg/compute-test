@@ -1,7 +1,6 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
-//import {describe,expect,it} from 'angular2/testing';
-//import {Child} from './app.component'
+
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -30,12 +29,7 @@ describe('AppComponent', () => {
   beforeEach(() => { 
     this.objCompute = new AppComponent();
    });
-// afterEach(() => { 
-//     this.objCaculator=null;
-//     this.firstNumber=0;
-//     this.secondNumber=0;
-//     this.result=0;
-// });
+
 it('check fibonacci series', () => {
   var result=this.objCompute.FibonnaciSeries(5);
   console.log(result);
@@ -58,20 +52,12 @@ it('should check if the lcm is greater than or equal to the largest number', () 
   console.log(result);
   expect(result).toBeGreaterThanOrEqual(4);
 });
+
+it('should calculate', ()=>{
+  expect(this.objCompute.total).toBe(3);
 });
-//tried yes
-// export function main() {
-//   describe('Greeting Component', () => {
-//       it('should emit greeting event', (done) => {
-//           let child = new Child();
-//           child.greeting.subscribe(g => {
-//              expect(g).toEqual({greeting:'hello'});
-//              done();
-//           });
-//           child.sayHello();
-//       });
-//   });
-// }
+});
+
 
 
 

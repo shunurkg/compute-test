@@ -4,32 +4,25 @@ import { Component,Output, EventEmitter } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-//tried yes
-// @Component({
-//     selector:'child',
-//     template:`<button (click)="sayHello()">Greet</button>`
-// })
-// export class Child{
-//     @Output() greeting = new EventEmitter();
-//     sayHello(){
-//         this.greeting.emit({greeting:'hello'});
-//     }
-// }
 
-// @Component({
-//     selector:'parent',
-//     template:`<child (greeting)="onGreeting($event)"></child>`
-// })
-// export class Parent{
-//     onGreeting(e){
-//         console.log(e);
-//     }
-// }
 
 export class AppComponent {
   title = 'compute test';
+  courses=[1,2];
+  total:number;
+  items=[
+    { name:'item1',price:1},
+    { name:'item2',price:2}
+  ];
 
-courses=[1,2];
+  constructor(){
+    this.calculate();
+  }
+
+  calculate(){
+    this.total=this.items.reduce((sum,item)=> sum+ this.items["price"] ,0)
+  }
+   
   FibonnaciSeries(number) {
     var first = 0;
     var second = 1;
@@ -61,4 +54,7 @@ courses=[1,2];
       ++lcm;
     } return lcm;
   }
+
+  
+  
 }
